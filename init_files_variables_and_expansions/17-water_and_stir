@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%x\n" $((5#$WATER + 5#$STIR))
+result=$(echo $((5#$WATER + 5#$STIR))); chars=bestchol; out=""; while [ $result -gt 0 ]; do out=${chars:$((result%23)):1}$out; result=$((result/23)); done; echo "$out"
