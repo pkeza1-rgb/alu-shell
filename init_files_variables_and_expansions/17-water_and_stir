@@ -1,2 +1,15 @@
 #!/bin/bash
-n=$((5#$WATER + 5#$STIR)); base=bestchol; r=""; if [ $n -eq 0 ]; then echo b; exit; fi; while [ $n -gt 0 ]; do r=${base:$((n%23)):1}$r; n=$((n/23)); done; echo $r
+n=$((5#$WATER + 5#$STIR))
+base=bestchol
+r=""
+if [ $n -eq 0 ]
+then
+echo b
+exit
+fi
+while [ $n -gt 0 ]
+do
+r=${base:$((n%23)):1}$r
+n=$((n/23))
+done
+echo $r
