@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -c "n=int('$WATER'.translate(str.maketrans('water','01234')),5)+int('$STIR'.translate(str.maketrans('stir.','01234')),5);print(''.join(['bestchol'[int(d)] for d in oct(n)[2:]]))"
+python3 -c "print(''.join(['bestchol'[int(d)] for d in oct(int('$WATER'.translate(str.maketrans('water','01234')),5)+int('$STIR'.translate(str.maketrans('stir.','01234')),5))[2:]]))"
