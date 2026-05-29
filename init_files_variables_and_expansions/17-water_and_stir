@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(echo "ibase=5; obase=23; $WATER + $STIR" | bc)
+echo $(printf "%o" $(echo "$(( (5#$WATER + 5#$STIR) ))"))
