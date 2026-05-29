@@ -1,3 +1,2 @@
 #!/bin/bash
-cut -c1 | tr -d '
-' | tr '[:lower:]' '[:upper:]'; echo
+cut -c1 | tr -d '\n' | tr '[:lower:]' '[:upper:]'; echo
