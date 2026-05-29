@@ -1,14 +1,2 @@
 #!/bin/bash
-
-sum=$((5#$WATER + 5#$STIR))
-result=""
-
-chars="0123456789abcdefghijklm"
-
-while [ $sum -gt 0 ]
-do
-    result="${chars:$((sum % 23)):1}$result"
-    sum=$((sum / 23))
-done
-
-echo "$result"
+echo $(echo "obase=23; $(echo $((5#$WATER + 5#$STIR)))" | bc)
