@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+# This script displays filenames after the first dash
 
 for file in *
 do
-    echo "${file#*-}"
+    echo "$file" | cut -d '-' -f 2-
 done
